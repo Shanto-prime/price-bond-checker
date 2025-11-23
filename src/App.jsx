@@ -2,34 +2,10 @@ import "./App.css";
 import data1 from "./data/draw1.json";
 import data2 from "./data/draw2.json";
 import data3 from "./data/draw3.json";
+import winner from "./data/winingNumber.json";
 
 function App() {
-  const winningNumber = [
-    "0108331",
-    "0156897",
-    "0056362",
-    "0453668",
-    "0912444",
-    "0983572",
-    "0013386",
-    "0014992",
-    "0028183",
-    "0053226",
-    "0119069",
-    "0168873",
-    "0244074",
-    "0257594",
-    "0265938",
-    "0292941",
-    "0296429",
-    "0327910",
-    "0340407",
-    "0349315",
-    "0355206",
-    "0367529",
-    "0369117",
-    "0417728",
-  ];
+  const winningNumber = [...winner].map((item) => item.id);
   const allData = [...data1, ...data2, ...data3].map((item) => item.bond);
 
   function check() {
