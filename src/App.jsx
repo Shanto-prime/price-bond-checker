@@ -22,7 +22,22 @@ function App() {
 
   return (
     <>
-      <h2>price-bond-checker</h2>
+      <h2 className="p-2 text-2xl font-bold bg-cyan-700 text-white text-center">
+        Price Bond Checker
+      </h2>
+      <span className="w-full flex py-2 px-2 ">
+        <input
+          type="number"
+          className="input validator w-full"
+          required
+          placeholder="Type a number between 1 to 10"
+          min="1"
+          max="10"
+          title="Must be between be 1 to 10"
+        />
+      </span>
+      <p className="validator-hint">Must be between be 1 to 10</p>
+
       <button onClick={check}>Check</button>
     </>
   );
